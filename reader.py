@@ -22,4 +22,4 @@ for directory, _, file_list in os.walk("/tmp/" + identifier + "-src"):
           print("this is the main file")
       print("true")
 
-subprocess.call(["/home/ubuntu/anaconda3/bin/plastex", "--split-level=-2", "--renderer=HTML5", '--dollars', main_file])
+subprocess.call(["/home/ubuntu/anaconda3/bin/plastex", "--split-level=-2", "--renderer=HTML5", '--dollars', main_file], cwd="/tmp/" + identifier + "-src")
